@@ -1,0 +1,6 @@
+/**/obj/
+/**/bin/
+/**/.vs/
+*.log
+*.tmp
+.DS_Store

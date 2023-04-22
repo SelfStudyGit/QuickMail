@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="QuickMail.Views.SettingPage"
+             Title="SettingPage">
+    <ScrollView>
+
+        <TableView Intent="Settings">
+            <TableRoot>
+                <TableSection Title="MAIL">
+                    <EntryCell Label="Send From"
+                               Text="{Binding MailAddressFrom}"
+                               Placeholder="mail address"/>
+                    <EntryCell Label="Send To"
+                               Text="{Binding MailAddressTo}"
+                               Placeholder="mail address"/>
+                </TableSection>
+                <TableSection Title="GMAIL">
+                    <EntryCell Label="Login"
+                               Text="{Binding Username}"
+                               Placeholder="username"/>
+                    <EntryCell Label="Password"
+                               Text="{Binding Password}"
+                               Placeholder="password"/>
+                </TableSection>
+            </TableRoot>
+        </TableView>
+    </ScrollView>
+</ContentPage>
