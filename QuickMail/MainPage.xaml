@@ -8,9 +8,9 @@
             VerticalOptions="FillAndExpand"
             HorizontalOptions="FillAndExpand" />
         <Button
-            x:Name="SnedButton"
+            x:Name="SendButton"
             Text="Send"
-            Clicked="SnedButton_ClickedAsync" />
+            Clicked="SendButton_ClickedAsync" />
     </StackLayout>
 </ContentPage>
 

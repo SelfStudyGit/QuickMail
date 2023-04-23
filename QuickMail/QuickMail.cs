@@ -5,18 +5,19 @@ namespace QuickMail
 {
     public class QuickMail
     {
-        const string fromAddress = "username@gmail.com";
-        private string sendAddress = "";
+        public string MailAddressFrom { get; set; }
+        public string MailAddressTo { get; set; }
+        public string Username { get; set; }
+        public string Password { get; set; }
+
         private string bodyText = "";
 
-        public QuickMail()
+        public QuickMail(string mailAddressFrom, string mailAddressTo, string username, string password)
         {
-        }
-
-        public string SendAddress
-        {
-            set { sendAddress = value; }
-            get { return sendAddress; }
+            this.MailAddressFrom = mailAddressFrom;
+            this.MailAddressTo = mailAddressTo;
+            this.Username = username;
+            this.Password = password;
         }
 
         public string BodyText
@@ -30,13 +31,13 @@ namespace QuickMail
             var msg = new MimeMessage();
 
             // Prepare the sender
-            var from = new MailboxAddress("", fromAddress);
+            var from = new MailboxAddress("", MailAddressFrom);
 
             // Set the sender's information (add)
             msg.From.Add(from);
 
             // Prepare the recipient
-            var to = new MailboxAddress("", sendAddress);
+            var to = new MailboxAddress("", MailAddressTo);
 
             // Set the recipient's information (add)
             msg.To.Add(to);
@@ -69,7 +70,7 @@ namespace QuickMail
                     await sc.ConnectAsync("smtp.gmail.com", 587);
 
                     // Authenticate with SMTP
-                    await sc.AuthenticateAsync("username", "pass");
+                    await sc.AuthenticateAsync(this.Username, this.Password);
 
                     // Send the mail
                     await sc.SendAsync(msg);

@@ -36,10 +36,32 @@ public class SettingViewModel : Prism.Mvvm.BindableBase
             Preferences.Set("Password", _password);
         }
     }
+    private string _mailAddressTo;
+    public string MailAddressTo
+    {
+        get => _mailAddressTo;
+        set
+        {
+            SetProperty(ref _mailAddressTo, value, nameof(MailAddressTo));
+            Preferences.Set("MailAddressTo", _mailAddressTo);
+        }
+    }
+    private string _mailAddressFrom;
+    public string MailAddressFrom
+    {
+        get => _mailAddressFrom;
+        set
+        {
+            SetProperty(ref _mailAddressFrom, value, nameof(MailAddressFrom));
+            Preferences.Set("MailAddressFrom", _mailAddressFrom);
+        }
+    }
 
     public SettingViewModel()
     {
         _username = Preferences.Get("Username", "");
         _password = Preferences.Get("Password", "");
+        _mailAddressTo = Preferences.Get("MailAddressTo", "");
+        _mailAddressFrom = Preferences.Get("MailAddressFrom", "");
     }
 }
