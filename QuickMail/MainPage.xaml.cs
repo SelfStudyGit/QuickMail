@@ -30,10 +30,12 @@ public partial class MainPage : ContentPage
     {
         QuickMail mail = new QuickMail(_vmSetting.MailAddressFrom, _vmSetting.MailAddressTo, _vmSetting.Username, _vmSetting.Password);
         mail.BodyText = BodyTextEditor.Text;
-
+        
+        SendButton.IsEnabled = false;
         BodyTextEditor.Text = "Sending message...";
         await mail.SendMailAsync();
 
         Environment.Exit(0);    //close this app. invalid in debug mode at Visual Studio
+        SendButton.IsEnabled = true;
     }
 }
