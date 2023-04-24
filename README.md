@@ -5,6 +5,8 @@ A work in progress, currently under development.
 
 ## Features
 
+- [x] Send via Gmail
+- [x] Close app after sending
 - [ ] Attachment file
 - [ ] Send by Ctrl + Enter
 
