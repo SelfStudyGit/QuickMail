@@ -8,7 +8,7 @@
 
     <TabBar>
     <ShellContent
-        Title="QuickMail"
+        Title="Main"
         ContentTemplate="{DataTemplate local:MainPage}"
         Route="main" />
     <ShellContent

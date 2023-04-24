@@ -5,6 +5,7 @@
     <StackLayout>
         <Editor
             x:Name="BodyTextEditor"
+            Text="{Binding BodyText}"
             VerticalOptions="FillAndExpand"
             HorizontalOptions="FillAndExpand" />
         <Button
