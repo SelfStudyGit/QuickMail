@@ -5,10 +5,10 @@ A work in progress, currently under development.
 
 ## Features
 
+- [ ] Attachment file
 - [x] Send via Gmail
 - [x] Close app after sending
-- [ ] Attachment file
-- [ ] Send by Ctrl + Enter
+- [x] Move focus by TAB key on Mac/Win ~Send by Ctrl + Enter~
 
 ## Known Issures
 
