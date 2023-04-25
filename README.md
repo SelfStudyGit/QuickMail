@@ -6,7 +6,7 @@ A work in progress, currently under development.
 ## Features
 
 - [ ] Attachment file
-- [ ] Suitable window and text font size on Mac/Win 
+- [ ] Suitable window and text size on Mac/Win 
 - [x] Send via Gmail
 - [x] Close app after sending
 - [x] Move focus by TAB key on Mac/Win ~Send by Ctrl + Enter~
