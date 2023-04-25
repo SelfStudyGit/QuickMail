@@ -3,9 +3,10 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="QuickMail.MainPage">
     <StackLayout>
-        <Editor
+        <Entry
             x:Name="BodyTextEditor"
             Text="{Binding BodyText}"
+            Placeholder="Break line with Alt + Enter"
             VerticalOptions="FillAndExpand"
             HorizontalOptions="FillAndExpand" />
         <Button
