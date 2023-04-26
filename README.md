@@ -13,6 +13,7 @@ A work in progress, currently under development.
 
 ## Known Issures
 
+- [ ] Updated settings are not used at the time they are set and will be used the next time
 - [ ] 2nd line is not visible on Windows without scrolling
 - [ ] Not secure (Passwords is stored locally in plain text)
 - [x] Forced line breaks on Android
